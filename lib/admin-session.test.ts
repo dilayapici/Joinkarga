@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createAdminSession,validAdminSession,ADMIN_SESSION_SECONDS} from './admin-session';
+const secret='a-long-private-organizer-password';
+const now=Date.UTC(2026,9,26,12);
+test('admin sessions authenticate only a valid, unexpired organizer cookie',()=>{const token=createAdminSession(secret,now);assert.equal(validAdminSession(token,secret,now),true);assert.equal(validAdminSession(token,secret,now+(ADMIN_SESSION_SECONDS-1)*1000),true);assert.equal(validAdminSession(token,secret,now+ADMIN_SESSION_SECONDS*1000),false);assert.equal(validAdminSession(token,'another-long-private-organizer-password',now),false);assert.equal(validAdminSession(undefined,secret,now),false);assert.equal(validAdminSession(token,undefined,now),false);assert.ok(!token.includes(secret));assert.notEqual(createAdminSession(secret,now),token);});
+test('tampered, malformed, future and short-secret admin sessions are rejected',()=>{const token=createAdminSession(secret,now);assert.equal(validAdminSession(token.slice(0,-1)+(token.endsWith('0')?'1':'0'),secret,now),false);assert.equal(validAdminSession('invalid',secret,now),false);assert.equal(validAdminSession(createAdminSession(secret,now+100000),secret,now),false);assert.throws(()=>createAdminSession('short',now));assert.equal(validAdminSession(token,'short',now),false);assert.equal(validAdminSession(token.replace(/^\d+/,String(Math.floor(now/1000)+9999999)),secret,now),false);});

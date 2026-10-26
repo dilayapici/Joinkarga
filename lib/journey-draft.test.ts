@@ -1,0 +1,6 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {journeyAfterSignIn,emptyJourney} from './journey-draft';
+const previous={origin:'Lisbon',destination:'Porto',one_way_km:300,round_trip:false,mode:'car',cups:0,bottles:0,kg:51.3,updated_at:'2026-10-26'};
+test('sign-in preserves an entered journey without overwriting the previously saved record',()=>{const draft={...emptyJourney(),origin:'Istanbul',destination:'Lisbon',km:3237};const result=journeyAfterSignIn(draft,previous);assert.equal(result.journey.origin,'Istanbul');assert.equal(result.journey.destination,'Lisbon');assert.equal(result.saved,false);assert.equal(result.restoredDraft,true);assert.notEqual(result.journey,draft);assert.equal(previous.origin,'Lisbon');assert.equal(journeyAfterSignIn({...draft,destination:''},previous).journey.origin,'Istanbul');});
+test('a returning user without a draft sees the saved route, including an unknown distance',()=>{const result=journeyAfterSignIn(null,{...previous,one_way_km:null,kg:null});assert.equal(result.saved,true);assert.equal(result.journey.origin,'Lisbon');assert.equal(result.journey.km,null);assert.equal(result.restoredDraft,false);assert.deepEqual(journeyAfterSignIn(null,null).journey,emptyJourney());assert.equal(journeyAfterSignIn(null,{...previous,mode:'invalid'}).saved,false);});

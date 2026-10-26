@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {validRequestOrigin} from './request-origin';
+const {NextRequest}=createRequire(import.meta.url)('next/server');
+test('Next.js normalized loopback requests work in development',()=>{const request=new NextRequest('http://127.0.0.1:3000/api/admin',{method:'POST',headers:{Origin:'http://127.0.0.1:3000'}});assert.equal(new URL(request.url).hostname,'localhost');assert.notEqual(request.headers.get('origin'),new URL(request.url).origin);assert.equal(validRequestOrigin(request.headers.get('origin'),request.url,true),true);assert.equal(validRequestOrigin('http://[::1]:3000','http://localhost:3000/api/admin',true),true);});
+test('cross-site, different port/scheme, malformed and opaque origins stay rejected',()=>{for(const origin of ['http://evil.example','http://localhost:3001','https://localhost:3000','null','file:///tmp','http://localhost:3000/path','http://localhost.evil.example:3000','http://127.0.0.1.evil.example:3000','http://user:password@localhost:3000'])assert.equal(validRequestOrigin(origin,'http://localhost:3000/api/admin',true),false,origin);assert.equal(validRequestOrigin(null,'http://localhost:3000',true),false);});
+test('production checks require exact origins, with no loopback alias exception',()=>{assert.equal(validRequestOrigin('http://127.0.0.1:3000','http://localhost:3000/api/admin',false),false);assert.equal(validRequestOrigin('https://karga.example','https://karga.example/api/admin',false),true);assert.equal(validRequestOrigin('https://evil.example','https://karga.example/api/admin',false),false);assert.equal(validRequestOrigin('http://karga.example','https://karga.example/api/admin',false),false);});
