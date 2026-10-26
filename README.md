@@ -14,6 +14,7 @@ Built for HackMeridian 2026.
 | Source repository URL | [dilayapici/Joinkarga](https://github.com/dilayapici/Joinkarga) | 
 | Demo video URL |[Video Lİnk](https://www.youtube.com/watch?v=i427ba13hHE) | 
 | Optional live app  | [Link here](https://joinkarga.vercel.app/) |
+| View on Stellar Expert | [Link here (https://stellar.expert/explorer/testnet/tx/f0cfa986625852402dae2b2626ca0034cd0eb774cb36742ae6bd34dfaccb4508) |
 
 ### The Problem
 
