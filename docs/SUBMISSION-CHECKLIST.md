@@ -14,7 +14,7 @@ Based only on the submission-integrity rules supplied by the owner. This checkli
 
 ## Required submission artifacts
 
-- [ ] Add a real repository URL. Verify judges can access the code and setup instructions.
+- [ ] Verify the source push and judge access at [https://github.com/dilayapici/Joinkarga](https://github.com/dilayapici/Joinkarga) (URL supplied by owner).
 - [ ] Add a YouTube or Vimeo demo URL. Confirm duration is 2–4 minutes and judges can access it.
 - [x] A self-contained HTML pitch-deck draft exists: [KARGA-PITCH-DECK.html](KARGA-PITCH-DECK.html).
 - [ ] Complete the deck's team, baseline, event-progress and link fields; the current file is explicitly a draft.
@@ -36,4 +36,4 @@ A demo script is not the required uploaded video. A local folder is not the requ
 
 ## Current outstanding inputs
 
-The owner still needs to provide the actual event cutoff, confirmed pre-event baseline, event-specific delta/evidence, team/roles, repository URL, uploaded demo-video URL and final reviewed deck. No public deployment or live earned Testnet payment has been independently verified in this environment.
+The owner still needs to provide the actual event cutoff, confirmed pre-event baseline, event-specific delta/evidence, team/roles, verified repository contents/access, uploaded demo-video URL and final reviewed deck. No public deployment or live earned Testnet payment has been independently verified in this environment.

@@ -10,7 +10,7 @@
 | Submission deadline, including timezone | **TEAM TO CONFIRM** |
 | Selected track and actual brief | **TEAM TO CONFIRM** |
 | Team members and roles | **TEAM TO CONFIRM** |
-| Source repository URL | **TEAM TO ADD** |
+| Source repository URL | [https://github.com/dilayapici/Joinkarga](https://github.com/dilayapici/Joinkarga) — push/access verification pending |
 | Starting commit/tag or equivalent baseline evidence | **TEAM TO ADD** |
 | 2–4 minute YouTube/Vimeo video URL | **TEAM TO ADD** |
 | Final pitch-deck file | [HTML draft](KARGA-PITCH-DECK.html) — complete marked fields before submission |

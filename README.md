@@ -10,7 +10,7 @@ An English-language event sustainability app built with Next.js, PostgreSQL, org
 
 | Required item | Current artifact or link | Status |
 | --- | --- | --- |
-| Source repository URL | **TEAM TO ADD: repository URL** | GitHub publication is pending. Add the actual destination repository URL; a local folder or source archive is not the required repository link. |
+| Source repository URL | [dilayapici/Joinkarga](https://github.com/dilayapici/Joinkarga) | Destination supplied by the owner; source push and judge access are not yet verified. |
 | Demo video URL | **TEAM TO ADD: YouTube or Vimeo URL** | Record a 2–4 minute video. A recording outline is available in [the demo script](docs/DEMO-SCRIPT.md); the script is not a video submission. |
 | Pitch deck file | [Karga pitch deck — HTML draft](docs/KARGA-PITCH-DECK.html) | An actual self-contained HTML deck is included. Complete its marked team/timeline/link fields before submission. Allowed formats: PDF, PPTX, PPT or HTML, up to 20 MiB. |
 | Optional live app | **NOT YET VERIFIED: deployed URL** | Do not describe localhost as a publicly accessible deployed app. |
@@ -40,7 +40,7 @@ No AI-generated raster images or official logo were supplied in this checkout; t
 
 ### Evidence and current limits
 
-The most recent recorded development run passed **35 automated tests, TypeScript checking and the production build**. This is not proof of a working live signup, camera scan, browser handoff or on-chain payout. The owner reported successful Neon schema setup; this execution environment could not independently verify the live database or payment flow. No public deployment, repository URL or demo-video URL has been verified here. Carbon figures are estimates, and Testnet XLM has no monetary value.
+The most recent recorded development run passed **35 automated tests, TypeScript checking and the production build**. This is not proof of a working live signup, camera scan, browser handoff or on-chain payout. The owner reported successful Neon schema setup; this execution environment could not independently verify the live database or payment flow. The owner supplied the Joinkarga repository URL; its uploaded contents and judge access have not been verified here. No public deployment or demo-video URL has been verified. Carbon figures are estimates, and Testnet XLM has no monetary value.
 
 Before submitting, complete [the integrity checklist](docs/SUBMISSION-CHECKLIST.md), [progress record](docs/HACKATHON-PROGRESS.md), [demo script](docs/DEMO-SCRIPT.md) and marked fields in the deck. Keep prior-work and AI disclosures consistent across all artifacts.
 

@@ -7,7 +7,7 @@
 - Actual pre-event starting point: **TEAM TO CONFIRM**.
 - Specific new HackMeridian work: **TEAM TO CONFIRM**.
 - Evidence of that before/after delta: **TEAM TO ADD**.
-- Repository URL: **TEAM TO ADD**.
+- Repository URL: [https://github.com/dilayapici/Joinkarga](https://github.com/dilayapici/Joinkarga) — source push and accessibility unverified.
 - Live demo / saved recording environment: **TEAM TO CONFIRM**.
 - Actual confirmed earned reward transaction, if demonstrated: **TEAM TO ADD OR EXPLICITLY STATE UNVERIFIED**.
 
