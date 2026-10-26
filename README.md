@@ -9,11 +9,11 @@ Built for HackMeridian 2026.
 
 ### Required links and files
 
-| Required item | Current artifact or link | Status |
-| --- | --- | --- |
+| Required item | Current artifact or link 
+| --- | --- |
 | Source repository URL | [dilayapici/Joinkarga](https://github.com/dilayapici/Joinkarga) | 
 | Demo video URL |[Video Lİnk](https://www.youtube.com/watch?v=i427ba13hHE) | 
-| Optional live app |  | [Link here](https://joinkarga.vercel.app/) |
+| Optional live app  | [Link here](https://joinkarga.vercel.app/) |
 
 ### The Problem
 
